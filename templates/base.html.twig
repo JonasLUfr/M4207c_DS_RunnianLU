@@ -7,13 +7,25 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
+		<link rel="stylesheet" href="https://bootswatch.com/5/lux/_bootswatch.scss" />
+		<link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.css" />
+		<link rel="stylesheet" href="https://bootswatch.com/5/lux/_variables.scss />
         {% endblock %}
-
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
+        <div class="container">
+            <a href="/serveur">Home</a>
+            <a href="/afficher_inscription">Inscription</a>
+            <a href="/list_inscription">Liste_users</a>
+            <a href="/afficher_upload">Fichiers</a>
+            <a href="/list_fichiers">Fichiers_liste</a>
+            <a href="/logout">Logout</a>
+    </div>
+    <div class="container">
         {% block body %}{% endblock %}
+    </div> 
     </body>
 </html>
